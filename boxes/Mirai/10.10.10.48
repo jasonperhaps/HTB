@@ -1,0 +1,2 @@
+ssh pi@10.10.10.48 
+passwd: raspberry

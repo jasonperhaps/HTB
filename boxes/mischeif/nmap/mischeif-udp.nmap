@@ -1,0 +1,9 @@
+# Nmap 7.70 scan initiated Sun Jan  6 09:28:40 2019 as: nmap -sU -v -oA nmap/mischeif-udp 10.10.10.92
+Nmap scan report for 10.10.10.92
+Host is up (0.42s latency).
+Not shown: 999 open|filtered ports
+PORT    STATE SERVICE
+161/udp open  snmp
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sun Jan  6 09:32:23 2019 -- 1 IP address (1 host up) scanned in 222.53 seconds

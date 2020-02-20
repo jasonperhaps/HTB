@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Nov  3 11:45:03 2018 as: nmap -sU -oA nmap/dropzone-udp 10.10.10.90
+Host: 10.10.10.90 ()	Status: Up
+Host: 10.10.10.90 ()	Ports: 69/open/udp//tftp///	Ignored State: open|filtered (999)
+# Nmap done at Sat Nov  3 11:46:14 2018 -- 1 IP address (1 host up) scanned in 71.89 seconds

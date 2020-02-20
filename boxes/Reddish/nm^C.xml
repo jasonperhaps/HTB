@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Feb 22 00:51:45 2019 as: nmap -p 1880 -sC -sV -vvvv -oA nm^C -->
+<nmaprun scanner="nmap" args="nmap -p 1880 -sC -sV -vvvv -oA nm^C" start="1550814705" startstr="Fri Feb 22 00:51:45 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="1880"/>
+<verbose level="4"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1550814705"/>
+<taskend task="NSE" time="1550814705"/>
+<taskbegin task="NSE" time="1550814705"/>
+<taskend task="NSE" time="1550814705"/>
+<taskbegin task="NSE" time="1550814705"/>
+<taskend task="NSE" time="1550814705"/>
+<taskbegin task="NSE" time="1550814705"/>
+<taskend task="NSE" time="1550814705"/>
+<runstats><finished time="1550814705" timestr="Fri Feb 22 00:51:45 2019" elapsed="0.42" summary="Nmap done at Fri Feb 22 00:51:45 2019; 0 IP addresses (0 hosts up) scanned in 0.42 seconds" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

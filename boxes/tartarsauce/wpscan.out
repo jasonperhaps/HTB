@@ -1,0 +1,121 @@
+_______________________________________________________________
+        __          _______   _____
+        \ \        / /  __ \ / ____|
+         \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+          \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+           \  /\  /  | |     ____) | (__| (_| | | | |
+            \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+        WordPress Security Scanner by the WPScan Team
+                       Version 3.3.1
+          Sponsored by Sucuri - https://sucuri.net
+      @_WPScan_, @ethicalhack3r, @erwan_lr, @_FireFart_
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.10.10.88/webservices/wp/
+[32m[+][0m Started: Sun Oct 21 03:13:15 2018
+
+Interesting Finding(s):
+
+[32m[+][0m http://10.10.10.88/webservices/wp/
+ | Interesting Entry: Server: Apache/2.4.18 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m http://10.10.10.88/webservices/wp/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m http://10.10.10.88/webservices/wp/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m WordPress version 4.9.4 identified.
+ | Detected By: Emoji Settings (Passive Detection)
+ |  - http://10.10.10.88/webservices/wp/, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://10.10.10.88/webservices/wp/, Match: 'WordPress 4.9.4'
+ |
+ | [31m[!][0m 5 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: WordPress <= 4.9.4 - Application Denial of Service (DoS) (unpatched)
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9021
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6389
+ |      - https://baraktawily.blogspot.fr/2018/02/how-to-dos-29-of-world-wide-websites.html
+ |      - https://github.com/quitten/doser.py
+ |      - https://thehackernews.com/2018/02/wordpress-dos-exploit.html
+ |
+ | [31m[!][0m Title: WordPress 3.7-4.9.4 - Remove localhost Default
+ |     Fixed in: 4.9.5
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9053
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10101
+ |      - https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+ |      - https://github.com/WordPress/WordPress/commit/804363859602d4050d9a38a21f5a65d9aec18216
+ |
+ | [31m[!][0m Title: WordPress 3.7-4.9.4 - Use Safe Redirect for Login
+ |     Fixed in: 4.9.5
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9054
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10100
+ |      - https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+ |      - https://github.com/WordPress/WordPress/commit/14bc2c0a6fde0da04b47130707e01df850eedc7e
+ |
+ | [31m[!][0m Title: WordPress 3.7-4.9.4 - Escape Version in Generator Tag
+ |     Fixed in: 4.9.5
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9055
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10102
+ |      - https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+ |      - https://github.com/WordPress/WordPress/commit/31a4369366d6b8ce30045d4c838de2412c77850d
+ |
+ | [31m[!][0m Title: WordPress <= 4.9.6 - Authenticated Arbitrary File Deletion
+ |     Fixed in: 4.9.7
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9100
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12895
+ |      - https://blog.ripstech.com/2018/wordpress-file-delete-to-code-execution/
+ |      - http://blog.vulnspy.com/2018/06/27/Wordpress-4-9-6-Arbitrary-File-Delection-Vulnerbility-Exploit/
+ |      - https://github.com/WordPress/WordPress/commit/c9dce0606b0d7e6f494d4abe7b193ac046a322cd
+ |      - https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/
+ |      - https://www.wordfence.com/blog/2018/07/details-of-an-additional-file-deletion-vulnerability-patched-in-wordpress-4-9-7/
+
+[34m[i][0m The main theme could not be detected.
+
+Scan Aborted: Canceled by User
+Trace: /var/lib/gems/2.5.0/gems/ethon-0.11.0/lib/ethon/multi/operations.rb:128:in `select'
+/var/lib/gems/2.5.0/gems/ethon-0.11.0/lib/ethon/multi/operations.rb:128:in `block in set_fds'
+/var/lib/gems/2.5.0/gems/ethon-0.11.0/lib/ethon/multi/operations.rb:127:in `loop'
+/var/lib/gems/2.5.0/gems/ethon-0.11.0/lib/ethon/multi/operations.rb:127:in `set_fds'
+/var/lib/gems/2.5.0/gems/ethon-0.11.0/lib/ethon/multi/operations.rb:47:in `perform'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/runnable.rb:15:in `run'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/memoizable.rb:51:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/finder/enumerator.rb:33:in `enumerate'
+/usr/share/rubygems-integration/all/gems/wpscan-3.3.1/app/finders/plugins/known_locations.rb:15:in `aggressive'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/base_finders.rb:29:in `run_finder'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/same_type_finders.rb:14:in `block (2 levels) in run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/same_type_finders.rb:13:in `each'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/same_type_finders.rb:13:in `block in run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/same_type_finders.rb:12:in `each'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/same_type_finders.rb:12:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/independent_finder.rb:19:in `find'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/finders/independent_finder.rb:10:in `find'
+/usr/share/rubygems-integration/all/gems/wpscan-3.3.1/lib/wpscan/target.rb:49:in `plugins'
+/usr/share/rubygems-integration/all/gems/wpscan-3.3.1/app/controllers/enumeration/enum_methods.rb:55:in `enum_plugins'
+/usr/share/rubygems-integration/all/gems/wpscan-3.3.1/app/controllers/enumeration.rb:16:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/controllers.rb:43:in `each'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner/controllers.rb:43:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner.rb:103:in `run'
+/usr/share/rubygems-integration/all/gems/wpscan-3.3.1/bin/wpscan:15:in `block in <top (required)>'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.0.40.1/lib/cms_scanner.rb:94:in `initialize'
+/usr/share/rubygems-integration/all/gems/wpscan-3.3.1/bin/wpscan:5:in `new'
+/usr/share/rubygems-integration/all/gems/wpscan-3.3.1/bin/wpscan:5:in `<top (required)>'
+/usr/bin/wpscan:23:in `load'
+/usr/bin/wpscan:23:in `<main>'

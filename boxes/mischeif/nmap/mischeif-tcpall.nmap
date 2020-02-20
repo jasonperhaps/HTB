@@ -1,0 +1,11 @@
+# Nmap 7.70 scan initiated Sun Jan  6 09:19:46 2019 as: nmap -p- -v --max-retries 0 -oA nmap/mischeif-tcpall 10.10.10.92
+Warning: 10.10.10.92 giving up on port because retransmission cap hit (0).
+Nmap scan report for 10.10.10.92
+Host is up (0.44s latency).
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+3366/tcp open  creativepartnr
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sun Jan  6 09:37:58 2019 -- 1 IP address (1 host up) scanned in 1091.39 seconds

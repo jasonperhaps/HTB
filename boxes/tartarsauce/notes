@@ -1,0 +1,2 @@
+* Scan box
+-- nmap -sV -sC -oA nmap/nmap.out 

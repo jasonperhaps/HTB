@@ -1,0 +1,8 @@
+# Nmap 7.70 scan initiated Fri Feb 22 00:56:40 2019 as: nmap -p- -T5 --max-retries 2 -vvv -oA nmap/allports-reddish 10.10.10.94
+Increasing send delay for 10.10.10.94 from 0 to 5 due to 219 out of 546 dropped probes since last increase.
+Warning: 10.10.10.94 giving up on port because retransmission cap hit (2).
+Nmap scan report for 10.10.10.94
+Host is up, received echo-reply ttl 63 (0.39s latency).
+Skipping host 10.10.10.94 due to host timeout
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Fri Feb 22 01:11:40 2019 -- 1 IP address (1 host up) scanned in 900.19 seconds

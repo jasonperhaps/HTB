@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Wed Oct 24 03:27:54 2018 as: nmap -sV -sC -oA nmap/nmap -T4 222.24.215.2
+Host: 222.24.215.2 ()	Status: Up
+Host: 222.24.215.2 ()	Ports: 7/open/tcp//echo?///, 22/open/tcp//ssh//OpenSSH 5.3 (protocol 2.0)/, 80/open/tcp//http//nginx/, 443/open/tcp//ssl|http//nginx/, 801/open/tcp//http//Apache httpd 2.4.12 ((Unix) OpenSSL|1.0.1g-fips)/, 901/open/tcp//http//Apache httpd 2.4.12 ((Unix) OpenSSL|1.0.1g-fips)/, 3333/open/tcp//http//Apache httpd 2.4.12 ((Unix) OpenSSL|1.0.1g-fips)/, 8081/open/tcp//http//Apache httpd 2.4.12 ((Unix) OpenSSL|1.0.1g-fips)/, 8082/open/tcp//http//Apache httpd 2.4.12 ((Unix) OpenSSL|1.0.1g-fips)/	Ignored State: closed (991)
+# Nmap done at Wed Oct 24 03:28:26 2018 -- 1 IP address (1 host up) scanned in 31.24 seconds

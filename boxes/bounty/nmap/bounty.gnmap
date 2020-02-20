@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Oct 27 21:56:50 2018 as: nmap -sC -sV -oA nmap/bounty 10.10.10.93
+Host: 10.10.10.93 ()	Status: Up
+Host: 10.10.10.93 ()	Ports: 80/open/tcp//http//Microsoft IIS httpd 7.5/	Ignored State: filtered (999)
+# Nmap done at Sat Oct 27 21:57:29 2018 -- 1 IP address (1 host up) scanned in 39.49 seconds

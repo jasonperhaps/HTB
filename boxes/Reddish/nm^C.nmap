@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Fri Feb 22 00:51:45 2019 as: nmap -p 1880 -sC -sV -vvvv -oA nm^C
+Read data files from: /usr/bin/../share/nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Fri Feb 22 00:51:45 2019 -- 0 IP addresses (0 hosts up) scanned in 0.42 seconds

@@ -1,0 +1,43 @@
+# Nmap 7.70 scan initiated Wed Oct 24 03:27:54 2018 as: nmap -sV -sC -oA nmap/nmap -T4 222.24.215.2
+Nmap scan report for 222.24.215.2
+Host is up (0.038s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE  VERSION
+7/tcp    open  echo?
+22/tcp   open  ssh      OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 66:1f:0a:1f:81:e4:80:cb:99:90:0f:70:ad:ca:b4:f6 (DSA)
+|_  2048 0b:78:40:13:a4:11:9e:31:55:94:2c:9a:74:ec:65:ee (RSA)
+80/tcp   open  http     nginx
+|_http-server-header: nginx
+| http-title: Site doesn't have a title (text/html).
+|_Requested resource was http://222.24.215.2/index_1.html
+|_http-trane-info: Problem with XML parsing of /evox/about
+443/tcp  open  ssl/http nginx
+|_http-server-header: nginx
+|_http-title: Did not follow redirect to http://222.24.215.2/index_1.html
+| ssl-cert: Subject: commonName=srunsoft/organizationName=SRun/stateOrProvinceName=ZheJiang/countryName=CN
+| Subject Alternative Name: DNS:*.srun.com
+| Not valid before: 2015-11-17T08:04:00
+|_Not valid after:  2025-11-17T08:04:00
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg: 
+|_  http/1.1
+801/tcp  open  http     Apache httpd 2.4.12 ((Unix) OpenSSL/1.0.1g-fips)
+|_http-server-header: Apache/2.4.12 (Unix) OpenSSL/1.0.1g-fips
+|_http-title: Did not follow redirect to http://202.117.80.60/index_2.html?url=
+901/tcp  open  http     Apache httpd 2.4.12 ((Unix) OpenSSL/1.0.1g-fips)
+|_http-server-header: Apache/2.4.12 (Unix) OpenSSL/1.0.1g-fips
+|_http-title: Did not follow redirect to http://202.117.80.60/index_2.html?url=
+3333/tcp open  http     Apache httpd 2.4.12 ((Unix) OpenSSL/1.0.1g-fips)
+|_http-server-header: Apache/2.4.12 (Unix) OpenSSL/1.0.1g-fips
+|_http-title: Did not follow redirect to http://202.117.80.60/index_2.html?url=
+8081/tcp open  http     Apache httpd 2.4.12 ((Unix) OpenSSL/1.0.1g-fips)
+|_http-server-header: Apache/2.4.12 (Unix) OpenSSL/1.0.1g-fips
+|_http-title: Site doesn't have a title (text/html).
+8082/tcp open  http     Apache httpd 2.4.12 ((Unix) OpenSSL/1.0.1g-fips)
+|_http-server-header: Apache/2.4.12 (Unix) OpenSSL/1.0.1g-fips
+|_http-title: Site doesn't have a title (text/html).
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 24 03:28:26 2018 -- 1 IP address (1 host up) scanned in 31.24 seconds

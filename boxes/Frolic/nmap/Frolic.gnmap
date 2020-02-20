@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Fri Mar 29 07:52:52 2019 as: nmap -sC -sV -oA nmap/Frolic 10.10.10.111
+Host: 10.10.10.111 ()	Status: Up
+Host: 10.10.10.111 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 445/open/tcp//netbios-ssn//Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)/, 9999/open/tcp//http//nginx 1.10.3 (Ubuntu)/	Ignored State: closed (996)
+# Nmap done at Fri Mar 29 07:53:35 2019 -- 1 IP address (1 host up) scanned in 42.12 seconds

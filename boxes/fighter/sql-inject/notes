@@ -1,0 +1,23 @@
+0.Modules
+* Execute Exploit
+-- Requests: Make Post
+* Read Cookie
+-- base64.b64decode: Read Cookie
+-- urlib.parse.unquote
+
+1. Enable RCE Mode
+* Enabe XP CMD Shell (REQ: POST)
+* Create Table (REQ: POST)
+2. Run Commands
+* Truncate Table (REQ: POST)
+* XP CMDSHELL (REQ: POST)
+-- Inserts multiple rows
+
+3. Get Output
+* Get # of Rows (REQ: POST, STDOUT)
+* Print Each Line (REQ: POST, STDOUT)
+
+4. STDOUT
+* Email Cookie
+-- URL ENCODE
+-- B64 ENCODE

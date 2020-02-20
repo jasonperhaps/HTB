@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Mar 10 06:12:12 2019 as: nmap -sC -sV -oA nmap/ethereal 10.10.10.106
+Host: 10.10.10.106 (ethereal.htb)	Status: Up
+Host: 10.10.10.106 (ethereal.htb)	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 80/open/tcp//http//Microsoft IIS httpd 10.0/, 8080/open/tcp//http//Microsoft HTTPAPI httpd 2.0 (SSDP|UPnP)/	Ignored State: filtered (997)
+# Nmap done at Sun Mar 10 06:13:21 2019 -- 1 IP address (1 host up) scanned in 68.66 seconds

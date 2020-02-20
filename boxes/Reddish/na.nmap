@@ -1,0 +1,3 @@
+# Nmap 7.70 scan initiated Fri Feb 22 00:44:36 2019 as: nmap -sC -sV -oA na
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Fri Feb 22 00:44:37 2019 -- 0 IP addresses (0 hosts up) scanned in 1.04 seconds

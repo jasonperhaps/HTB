@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Jan  6 09:19:46 2019 as: nmap -p- -v -&#45;max-retries 0 -oA nmap/mischeif-tcpall 10.10.10.92 -->
+<nmaprun scanner="nmap" args="nmap -p- -v -&#45;max-retries 0 -oA nmap/mischeif-tcpall 10.10.10.92" start="1546784386" startstr="Sun Jan  6 09:19:46 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1546784386"/>
+<taskend task="Ping Scan" time="1546784387" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1546784387"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1546784387"/>
+<taskbegin task="SYN Stealth Scan" time="1546784387"/>
+<taskprogress task="SYN Stealth Scan" time="1546784418" percent="3.55" remaining="843" etc="1546785261"/>
+<taskprogress task="SYN Stealth Scan" time="1546784448" percent="5.14" remaining="1127" etc="1546785574"/>
+<taskprogress task="SYN Stealth Scan" time="1546784478" percent="9.17" remaining="902" etc="1546785379"/>
+<taskprogress task="SYN Stealth Scan" time="1546784508" percent="10.84" remaining="996" etc="1546785503"/>
+<taskprogress task="SYN Stealth Scan" time="1546784544" percent="14.51" remaining="925" etc="1546785469"/>
+<taskprogress task="SYN Stealth Scan" time="1546784574" percent="18.31" remaining="835" etc="1546785408"/>
+<taskprogress task="SYN Stealth Scan" time="1546784665" percent="23.82" remaining="889" etc="1546785554"/>
+<taskprogress task="SYN Stealth Scan" time="1546784813" percent="34.15" remaining="822" etc="1546785635"/>
+<taskprogress task="SYN Stealth Scan" time="1546784843" percent="38.43" remaining="731" etc="1546785574"/>
+<taskprogress task="SYN Stealth Scan" time="1546784885" percent="42.86" remaining="665" etc="1546785549"/>
+<taskprogress task="SYN Stealth Scan" time="1546784915" percent="46.62" remaining="605" etc="1546785520"/>
+<taskprogress task="SYN Stealth Scan" time="1546784999" percent="52.89" remaining="546" etc="1546785544"/>
+<taskprogress task="SYN Stealth Scan" time="1546785032" percent="57.33" remaining="481" etc="1546785512"/>
+<taskprogress task="SYN Stealth Scan" time="1546785095" percent="62.77" remaining="420" etc="1546785515"/>
+<taskprogress task="SYN Stealth Scan" time="1546785131" percent="67.21" remaining="363" etc="1546785494"/>
+<taskprogress task="SYN Stealth Scan" time="1546785209" percent="72.88" remaining="306" etc="1546785515"/>
+<taskprogress task="SYN Stealth Scan" time="1546785239" percent="77.40" remaining="249" etc="1546785488"/>
+<taskprogress task="SYN Stealth Scan" time="1546785312" percent="82.83" remaining="192" etc="1546785504"/>
+<taskprogress task="SYN Stealth Scan" time="1546785360" percent="87.85" remaining="135" etc="1546785495"/>
+<taskprogress task="SYN Stealth Scan" time="1546785438" percent="93.27" remaining="76" etc="1546785514"/>
+<taskend task="SYN Stealth Scan" time="1546785478" extrainfo="65535 total ports"/>
+<host starttime="1546784386" endtime="1546785478"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.92" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3366"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="creativepartnr" method="table" conf="3"/></port>
+</ports>
+<times srtt="437956" rttvar="72035" to="726096"/>
+</host>
+<runstats><finished time="1546785478" timestr="Sun Jan  6 09:37:58 2019" elapsed="1091.39" summary="Nmap done at Sun Jan  6 09:37:58 2019; 1 IP address (1 host up) scanned in 1091.39 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

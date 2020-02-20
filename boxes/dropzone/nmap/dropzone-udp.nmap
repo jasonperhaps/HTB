@@ -1,0 +1,8 @@
+# Nmap 7.70 scan initiated Sat Nov  3 11:45:03 2018 as: nmap -sU -oA nmap/dropzone-udp 10.10.10.90
+Nmap scan report for 10.10.10.90
+Host is up (0.35s latency).
+Not shown: 999 open|filtered ports
+PORT   STATE SERVICE
+69/udp open  tftp
+
+# Nmap done at Sat Nov  3 11:46:14 2018 -- 1 IP address (1 host up) scanned in 71.89 seconds

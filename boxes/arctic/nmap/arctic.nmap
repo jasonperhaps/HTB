@@ -1,0 +1,2 @@
+# Nmap 7.70 scan initiated Thu Jan 17 01:39:53 2019 as: nmap -sC -sV -oA nmap/arctic 10.10.10.11
+# Nmap done at Thu Jan 17 01:39:57 2019 -- 1 IP address (0 hosts up) scanned in 3.52 seconds

@@ -1,0 +1,7 @@
+# Nmap 7.70 scan initiated Sat Nov  3 11:41:54 2018 as: nmap -sC -sV -oA nmap/dropzone 10.10.10.90
+Nmap scan report for 10.10.10.90
+Host is up (0.35s latency).
+All 1000 scanned ports on 10.10.10.90 are filtered
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov  3 11:47:43 2018 -- 1 IP address (1 host up) scanned in 348.98 seconds

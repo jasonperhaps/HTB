@@ -1,0 +1,5 @@
+# Nmap 7.70 scan initiated Sun Jan  6 09:19:46 2019 as: nmap -p- -v --max-retries 0 -oA nmap/mischeif-tcpall 10.10.10.92
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.92 ()	Status: Up
+Host: 10.10.10.92 ()	Ports: 22/open/tcp//ssh///, 3366/open/tcp//creativepartnr///	Ignored State: filtered (65533)
+# Nmap done at Sun Jan  6 09:37:58 2019 -- 1 IP address (1 host up) scanned in 1091.39 seconds

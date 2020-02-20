@@ -1,0 +1,23 @@
+### USER/GROUP ##########################################
+[-] Current user/group info:
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+
+
+[-] Users that have previously logged onto the system:
+Username         Port     From             Latest
+root             tty1                      Mon Oct 15 23:06:25 +0530 2018
+sahay            pts/0    192.168.225.34   Tue Sep 25 02:45:04 +0530 2018
+
+
+[-] Who else is logged on:
+ 19:22:41 up 4 days, 14:09,  0 users,  load average: 0.05, 0.08, 0.02
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+
+[-] It looks like we have some admin users:
+uid=104(syslog) gid=108(syslog) groups=108(syslog),4(adm)
+uid=1000(sahay) gid=1000(sahay) groups=1000(sahay),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),110(lxd),114(sambashare),119(lpadmin)
+
+[-] Accounts that have recently used sudo:
+/home/sahay/.sudo_as_admin_successful
+
+  

@@ -1,0 +1,29 @@
+# Fdb version 3
+["latex"] 1544288098 "notes.tex" "notes.dvi" "notes" 1544288098
+  "/etc/texmf/web2c/texmf.cnf" 1539707952 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1523050425 19823 fcbc01552b07b608574cbf8e1977e0c0 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1523050425 8294 b0f177401f895563eb19304d2389582d ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1542347156 32752 ce45b90d2fda49befaa367e6f5986072 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1542347156 32752 ce45b90d2fda49befaa367e6f5986072 ""
+  "/var/lib/texmf/web2c/pdftex/latex.fmt" 1544287139 4225422 2e674f90f22b661897eb7def302137b2 ""
+  "notes.aux" 1544288098 8 a94a2480d3289e625eea47cd1b285758 ""
+  "notes.tex" 1544288058 71 dc76161fc52b08af1c9d17467de14dbd ""
+  (generated)
+  "notes.log"
+  "notes.dvi"
+  "notes.aux"
+["pdflatex"] 1544288059 "notes.tex" "notes.pdf" "notes" 1544288060
+  "/etc/texmf/web2c/texmf.cnf" 1539707952 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480098733 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1523050425 19823 fcbc01552b07b608574cbf8e1977e0c0 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1523050425 8294 b0f177401f895563eb19304d2389582d ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1542347156 32752 ce45b90d2fda49befaa367e6f5986072 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1542347156 32752 ce45b90d2fda49befaa367e6f5986072 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1544287109 2972156 3d1103164bae8f59f0e4d5694676985f ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1544287142 4225484 1749f01fccf96e0c00a25579565e7ac2 ""
+  "notes.aux" 1544288059 8 a94a2480d3289e625eea47cd1b285758 ""
+  "notes.tex" 1544288058 71 dc76161fc52b08af1c9d17467de14dbd ""
+  (generated)
+  "notes.pdf"
+  "notes.aux"
+  "notes.log"

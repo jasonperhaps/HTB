@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Oct  6 11:03:49 2018 as: nmap -sC -sV -oA fighter 10.10.10.72
+Host: 10.10.10.72 ()	Status: Up
+Host: 10.10.10.72 ()	Ports: 80/open/tcp//http//Microsoft IIS httpd 8.5/	Ignored State: filtered (999)
+# Nmap done at Sat Oct  6 11:04:33 2018 -- 1 IP address (1 host up) scanned in 44.03 seconds

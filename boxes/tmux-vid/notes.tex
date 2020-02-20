@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{fonttable}
+\usepackage{ulem}
+\usepackage{color}
+
+\newcommand\hl{\bgroup\markoverwith
+        {\textcolor{green}{\rule[-.5ex]{2pt}
+{2.5ex}}}\ULon}
+
+\begin{document}
+\begin{enumerate}
+  \item tmux     
+    \begin{itemize}
+      \item tmux create new session: \hl{tmux new -s HTB}
+      \item Rearrange layout: \hl{Prefix + [space]}
+      \item Move pane : \hl{Prefix + \{ (or \})}
+    \end{itemize}
+    
+  \item connect with .ovpn connect pack \hl{openvpn miehahahah.ovpn}
+  \item how to create tmux session inside ssh session
+    \begin{enumerate}
+      \item \hl{tmux ls}
+      \item \hl{tmux attach -t MINER}
+    \end{enumerate}
+    
+    
+
+    
+    
+\end{enumerate}
+\end{document}
+

@@ -1,0 +1,8 @@
+1. Asks password ($input)
+2. $input > check() [check.dll]
+3. $input ^ \x09
+4. if $input == the String {
+  return True
+}else {
+  return False
+} 
